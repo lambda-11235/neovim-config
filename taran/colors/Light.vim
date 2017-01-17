@@ -1,18 +1,10 @@
 " Vim color file
 " Maintainer:	Taran Lynn
 
-highlight clear Normal
-set background=light
-
 " Remove all existing highlighting and set the defaults.
 highlight clear
 
-" Load the syntax highlighting defaults, if it's enabled.
-if exists("syntax_on")
-  syntax reset
-endif
-
-let colors_name = "Light"
+let g:colors_name = "Light"
 
 " Default color definitions
 " The format for color definitions should ideally be:
