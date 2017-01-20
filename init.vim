@@ -7,7 +7,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/vimproc', {'do': 'make'}
 
-Plug '~/.config/nvim/taran'
+Plug '~/.config/nvim/lambda_11235'
 
 " Language support
 Plug 'JuliaEditorSupport/julia-vim'
