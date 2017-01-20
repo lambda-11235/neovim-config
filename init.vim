@@ -3,14 +3,21 @@
 call plug#begin("~/.config/nvim/plugged")
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Shougo/vimproc', {'do': 'make'}
 
 Plug '~/.config/nvim/taran'
 
 " Language support
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'lervag/vimtex'
 Plug 'rust-lang/rust.vim'
-Plug 'derekwyatt/vim-scala'
-Plug 'JuliaEditorSupport/julia-vim'
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+Plug 'eagletmt/ghcmod-vim'
 call plug#end()
 
 
@@ -109,7 +116,24 @@ map <Leader>ta :tab ball<CR>
 " Command DTW deletes all trailing whitespace
 command -range=% DTW :<line1>,<line2>call Delete_trailing_whitespace()
 
+
 """"""""""""""""""""""""""""""""""""""""
 " Ultisnippet Setup
 """"""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsSnippetDirectories=["plugged/vim-snippets/UltiSnips", "ultisnippets"]
+
+
+""""""""""""""""""""""""""""""""""""""""
+" easy-align
+""""""""""""""""""""""""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
+""""""""""""""""""""""""""""""""""""""""
+" vimtex
+""""""""""""""""""""""""""""""""""""""""
+let g:vimtex_view_general_viewer = 'zathura'
