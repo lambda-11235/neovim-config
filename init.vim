@@ -114,7 +114,7 @@ map <Leader>q :wqa<CR>
 map <Leader>ta :tab ball<CR>
 
 " Command DTW deletes all trailing whitespace
-command -range=% DTW :<line1>,<line2>call Delete_trailing_whitespace()
+" command -range=% DTW :<line1>,<line2>call Delete_trailing_whitespace()
 
 
 """"""""""""""""""""""""""""""""""""""""

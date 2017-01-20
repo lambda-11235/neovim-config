@@ -1,0 +1,22 @@
+delete_trailing_whitespace.txt*	For Vim version 7.4.	Last change: 2017-01-20
+
+
+                    Delete Trailing Whitespace	by Taran Lynn
+
+
+Help on deleting trailing whitespace		*delete-trailing-whitespace*
+
+1. Commands for deleting trailing whitespace		|dtw-commands|
+
+==============================================================================
+1. Commands for deleting trailing whitespace			*dtw-commands*
+
+				*DeleteTrailingLines* *:DeleteTrailingLines*
+:DeleteTrailingLines		Deletes all triling lines that only contain
+				whitespace in the current buffer.
+
+				*DeleteTrailingWhitespace* *:DeleteTrailingWhitespace*
+:DeleteTrailingWhitespace	Deletes trailing whitespace from all lines in
+				the selected range.
+
+ vim:tw=78:ts=8:ft=help:norl:
