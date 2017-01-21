@@ -1,11 +1,12 @@
 
 " Set plugins
 call plug#begin("~/.config/nvim/plugged")
+Plug 'Shougo/vimproc', {'do': 'make'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/vimproc', {'do': 'make'}
+Plug 'tpope/vim-fugitive'
 
 Plug '~/.config/nvim/lambda_11235'
 
