@@ -7,6 +7,8 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/gnuplot.vim'
+Plug 'vim-airline/vim-airline'
 
 Plug '~/.config/nvim/lambda_11235'
 
@@ -110,6 +112,9 @@ map <Leader>m :wa \| make<CR>
 
 " Save all files and quit
 map <Leader>q :wqa<CR>
+
+" Open a file in a new tab
+map <Leader>te :tabe
 
 " Open all buffers in tabs
 map <Leader>ta :tab ball<CR>
