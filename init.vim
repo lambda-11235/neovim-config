@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gnuplot.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug '~/.config/nvim/lambda_11235'
 
@@ -114,7 +115,7 @@ map <Leader>m :wa \| make<CR>
 map <Leader>q :wqa<CR>
 
 " Open a file in a new tab
-map <Leader>te :tabe
+map <Leader>te :tabe<Space>
 
 " Open all buffers in tabs
 map <Leader>ta :tab ball<CR>
@@ -140,3 +141,9 @@ nmap ga <Plug>(EasyAlign)
 " vimtex
 """"""""""""""""""""""""""""""""""""""""
 let g:vimtex_view_general_viewer = 'zathura'
+
+""""""""""""""""""""""""""""""""""""""""
+" airline
+""""""""""""""""""""""""""""""""""""""""
+let g:airline_theme = "distinguished"
+let g:airline_powerline_fonts = 0
