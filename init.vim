@@ -10,6 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gnuplot.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'FredKSchott/CoVim'
 
 Plug '~/.config/nvim/lambda_11235'
 
@@ -18,6 +19,8 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'lervag/vimtex'
 Plug 'rust-lang/rust.vim'
+
+Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -120,6 +123,10 @@ map <Leader>te :tabe<Space>
 " Open all buffers in tabs
 map <Leader>ta :tab ball<CR>
 
+" Add a newline below/above the current one
+map <Leader>n o<Esc>
+map <Leader>N O<Esc>
+
 
 """"""""""""""""""""""""""""""""""""""""
 " Ultisnippet Setup
@@ -140,7 +147,10 @@ nmap ga <Plug>(EasyAlign)
 """"""""""""""""""""""""""""""""""""""""
 " vimtex
 """"""""""""""""""""""""""""""""""""""""
+let g:vimtex_latexmk_options = "-pdf -verbose -file-line-error -synctex=1 -interaction=nonstopmode -lualatex"
 let g:vimtex_view_general_viewer = 'zathura'
+
+call vimtex#imaps#add_map({'lhs' : '/', 'rhs' : '\frac', 'wrapper' : 'vimtex#imaps#wrap_math'})
 
 """"""""""""""""""""""""""""""""""""""""
 " airline
