@@ -15,6 +15,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug '~/.config/nvim/lambda_11235'
 
 " Language support
+Plug 'derekelkins/agda-vim'
+Plug 'idris-hackers/idris-vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'lervag/vimtex'
