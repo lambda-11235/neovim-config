@@ -16,11 +16,13 @@ Plug '~/.config/nvim/lambda_11235'
 
 " Language support
 Plug 'derekelkins/agda-vim'
+Plug 'hura/vim-asymptote'
 Plug 'idris-hackers/idris-vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'lervag/vimtex'
 Plug 'rust-lang/rust.vim'
+Plug 'udalov/kotlin-vim'
 
 Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
 
