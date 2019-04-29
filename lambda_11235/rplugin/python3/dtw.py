@@ -1,12 +1,12 @@
-import neovim
+import pynvim
 
-@neovim.plugin
+@pynvim.plugin
 class DeleteTrailingWhitespace(object):
     def __init__(self, vim):
         self.vim = vim
         self.whitespace = " \t\v\n\r"
 
-    @neovim.command('DeleteTrailingWhitespace', range='', sync=True)
+    @pynvim.command('DeleteTrailingWhitespace', range='', sync=True)
     def dtw(self, vrange):
         buf = self.vim.current.buffer
 
@@ -15,7 +15,7 @@ class DeleteTrailingWhitespace(object):
                 buf[idx] = self._strip_triling_whitespace(buf[idx])
 
 
-    @neovim.command('DeleteTrailingLines', sync=True)
+    @pynvim.command('DeleteTrailingLines', sync=True)
     def dtl(self):
         buf = self.vim.current.buffer
 

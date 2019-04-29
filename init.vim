@@ -5,30 +5,32 @@ Plug 'Shougo/vimproc', {'do': 'make'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdcommenter'
+Plug 'neomake/neomake'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/gnuplot.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'FredKSchott/CoVim'
 
 Plug '~/.config/nvim/lambda_11235'
 
 " Language support
+Plug 'JuliaEditorSupport/julia-vim'
 Plug 'derekelkins/agda-vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'elixir-lang/vim-elixir'
+" Plug 'fatih/vim-go'
 Plug 'hura/vim-asymptote'
 Plug 'idris-hackers/idris-vim'
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'derekwyatt/vim-scala'
 Plug 'lervag/vimtex'
 Plug 'rust-lang/rust.vim'
+Plug 'tikhomirov/vim-glsl'
 Plug 'udalov/kotlin-vim'
+Plug 'vim-scripts/gnuplot.vim'
 
 Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
-Plug 'eagletmt/ghcmod-vim'
+" Plug 'eagletmt/ghcmod-vim'
 call plug#end()
 
 
@@ -90,9 +92,9 @@ set scrolloff=5
 " Disable startup message
 set shortmess+=I
 
-" Set tab stops to be 2 spaces apart
-set shiftwidth=2
-set tabstop=2
+" Set tab stops to be 4 spaces apart
+set shiftwidth=4
+set tabstop=4
 
 " Show commands as they are being typed
 set showcmd
@@ -105,8 +107,16 @@ autocmd FileType tex :set spell spelllang=en_us
 " Turn Syntax coloring on
 syntax on
 
+" Use the longest match for completion, not the first.
+set wildmode=longest,list,full
+set wildmenu
+
 " Allow virtual editing in visual block mode
 set virtualedit=block
+
+" Allow loading project rc files.
+set exrc
+set secure
 
 """"""""""""""""""""""""""""""""""""""""
 " Key Bindings and Commands
